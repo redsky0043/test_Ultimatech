@@ -3,7 +3,6 @@
 @import "fonts";
 @import "global";
 
-
 .section {
     &__inner {
         position: relative;
@@ -21,7 +20,7 @@
     }
     &__right {
         // width: 100%;
-        margin-left: 59px;
+        padding: 0 59px;
         // background-color: rgba(165, 42, 42, 0.24);
     }
     &__img {
@@ -32,25 +31,67 @@
         bottom: 0px;
     }
     &__title {
-        margin-top: 250px;
+        margin-top: 26%;
         font-size: 208px;
+        line-height: 208px;
         @extend %cambria-bold;
-        
+    }
+    &__subtitle {
+        font-size: 67px;
+        line-height: 67px;
+        @extend %cambria-bold;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+    &__btn-copy {
+        margin: 0 auto;
+        width: 467px;
+        height: 80px;
+        border-radius: 40px;
+        outline: none;
+        background: none;
+        border: 1px dashed #464646;
+        cursor: pointer;
+        color: #f73427;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        transition: all 0.3s ease;
+        margin-bottom: 60px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 270px;
+            height: 79px;
+            border-right: 1px solid #464646;
+            z-index: 999;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 30px 0px #f73427;
+        }
+
+        &:active {
+            box-shadow: 0px 0px 30px 10px #f73427;
+        }
+    }
+    &__name {
+        font-size: 40px;
+        line-height: 43px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    &__copy {
+        font-size: 18px;
+        line-height: 22px;
+        color: #fff;
+    }
 
     &__footer {
         width: 100%;
@@ -62,8 +103,5 @@
         margin-bottom: 58px;
     }
 }
-
-
-
 
 @import "media";
