@@ -14,8 +14,10 @@
     <div class="container">
       <div class="section__inner">
         <div class="section__main">
-          <div class="section__left">
-            <img class="section__img" src="./img/witcher3.png" alt="witcher" >
+          <div class="section__left parallax">
+            <img class="section__img" src="./img/witcher.png" alt="witcher" >
+            <img class="section__img-back parallax__layer parallax__layer--back" src="./img/sparks_back.png" alt="sparks_back" >
+            <img class="section__img-front parallax__layer parallax__layer--base" src="./img/sparks_front.png" alt="sparks_front" >
           </div>
           <div class="section__right">
             <h1 class="section__title">
@@ -24,22 +26,23 @@
             <p class="section__subtitle">
               welcome bonus
             </p>
-            <button class="section__btn-copy">
-              <p class="section__name">
+            <button id="anim" class="section__btn-copy btn " onclick="copytext('#text')">
+              <span class="tooltiptext">Click to copy</span>
+              <p id="text" class="section__name">
                 witcher
               </p>
               <p class="section__copy">
                 copy code
               </p>
             </button>
-            <button class="section__btn-play">
+            <button class="section__btn-play btn">
               play now
             </button>
           </div>
         </div>
         <div class="section__footer">
-          <img class="footer__logo" src="./img/logo.png" alt="logo" >
-          <p class="footer__text">
+          <img class="section__footer__logo" src="./img/logo.png" alt="logo" >
+          <p class="section__footer__text">
             *Terms and Conditions Apply
           </p>
         </div>

@@ -5,7 +5,9 @@ html {
     scroll-behavior: smooth;
 }
 
-*,*::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -14,14 +16,14 @@ a {
     color: inherit;
 }
 
-ul, 
+ul,
 li {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-h1, 
+h1,
 h2,
 h3,
 h4,
@@ -38,7 +40,7 @@ body {
 }
 
 button {
-    outline: none;  
+    outline: none;
 }
 
 .container {
@@ -48,11 +50,77 @@ button {
 }
 
 .section {
-    background-image: url('../img/bg.jpg');
+    background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
     color: $palette-primary;
+    overflow: hidden;
 }
+
+.btn {
+    cursor: pointer;
+    border-radius: 40px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0px 0px 20px 0px $palette-active;
+    }
+
+    &:active {
+        box-shadow: 0px 0px 20px 5px $palette-active;
+    }
+}
+
+.tooltiptext {
+    width: 170px;
+    background-color: $palette-secondary;
+    color: $palette-active;
+    text-align: center;
+    padding: 3px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease;
+    bottom: -40px;
+    font-size: 14px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent $palette-secondary transparent;
+    }
+}
+
+// .parallax {
+//     perspective: 1px;
+//     // height: 100vh;
+//     // overflow-x: hidden;
+//     // overflow-y: auto;
+// }
+
+// .parallax__layer {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+// }
+
+// .parallax__layer--base {
+//     transform: translateZ(0);
+// }
+
+// .parallax__layer--back {
+//     transform: translateZ(-1px);
+// }

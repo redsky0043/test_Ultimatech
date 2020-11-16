@@ -1,7 +1,11 @@
 
 $color-white: #ffffff;
+$color-gray: #464646;
+$color-red: #f73427;
 
 $palette-primary: $color-white;
+$palette-secondary: $color-gray;
+$palette-active: $color-red;
 
 %cambria-bold {
     font-family: 'Cambria', sans-serif;
